@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--Simple Alerter-->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".50" />
+
+            <Button
+                android:id="@+id/simple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:onClick="simpleAlerter"
+                android:text="Simple Alerter"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <!--Alerter with Custom Icon-->
+            <Button
+                android:id="@+id/withIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withIcon"
+                android:text="Alerter With Icon"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/simple"
+                app:layout_constraintStart_toStartOf="@+id/simple"
+                app:layout_constraintTop_toBottomOf="@+id/simple" />
+
+            <!--Alerter Without Title-->
+            <Button
+                android:id="@+id/withOutTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withOutTitle"
+                android:text="Alerter without Title"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/withIcon"
+                app:layout_constraintStart_toStartOf="@+id/withIcon"
+                app:layout_constraintTop_toBottomOf="@+id/withIcon" />
+
+            <!--Alerter With Click Listener-->
+            <Button
+                android:id="@+id/withListener"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withListener"
+                android:text="Alerter With Click Listener"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/withOutTitle"
+                app:layout_constraintStart_toStartOf="@+id/withOutTitle"
+                app:layout_constraintTop_toBottomOf="@+id/withOutTitle" />
+
+            <!--Alerter With Verbose Text-->
+            <Button
+                android:id="@+id/withVerbose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withVerbose"
+                android:text="Alerter with Verbose Text"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/withListener"
+                app:layout_constraintStart_toStartOf="@+id/withListener"
+                app:layout_constraintTop_toBottomOf="@+id/withListener" />
+
+            <!--Alerter with Custom Animation-->
+            <Button
+                android:id="@+id/withAnim"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withAnim"
+                android:text="Alerter with Animation"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/withVerbose"
+                app:layout_constraintStart_toStartOf="@+id/withVerbose"
+                app:layout_constraintTop_toBottomOf="@+id/withVerbose" />
+
+            <!--Swipe to Dismiss Alerter-->
+
+            <!--Alerter with Progress-->
+            <Button
+                android:id="@+id/swipeToDismiss"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="swipeDismiss"
+                android:text="Swipe to Dismiss"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/withAnim"
+                app:layout_constraintStart_toStartOf="@+id/withAnim"
+                app:layout_constraintTop_toBottomOf="@+id/withAnim" />
+
+            <Button
+                android:id="@+id/withProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withProgress"
+                android:text="Alerter with Progress"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/swipeToDismiss"
+                app:layout_constraintStart_toStartOf="@+id/swipeToDismiss"
+                app:layout_constraintTop_toBottomOf="@+id/swipeToDismiss" />
+
+            <!--Alerter with Button-->
+            <Button
+                android:id="@+id/withButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="withButton"
+                android:text="Alerter with Buttons"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/withProgress"
+                app:layout_constraintStart_toStartOf="@+id/withProgress"
+                app:layout_constraintTop_toBottomOf="@+id/withProgress" />
+
+            <!--Alerter with Custom Font-->
+            <Button
+                android:id="@+id/customFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:onClick="customFont"
+                android:text="Alerter with Custom Font"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/withButton"
+                app:layout_constraintStart_toStartOf="@+id/withButton"
+                app:layout_constraintTop_toBottomOf="@+id/withButton" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Alerter Lab"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Toasty"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnError"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:onClick="ToastyMessage"
+                android:text="Error Toast"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/btnSuccess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="ToastyMessage"
+                android:text="success"
+                app:layout_constraintEnd_toEndOf="@+id/btnError"
+                app:layout_constraintStart_toStartOf="@+id/btnError"
+                app:layout_constraintTop_toBottomOf="@+id/btnError" />
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="ToastyMessage"
+                android:text="Show info"
+                app:layout_constraintEnd_toEndOf="@+id/btnSuccess"
+                app:layout_constraintStart_toStartOf="@+id/btnSuccess"
+                app:layout_constraintTop_toBottomOf="@+id/btnSuccess" />
+
+            <Button
+                android:id="@+id/btnWarning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="ToastyMessage"
+                android:text="warning"
+                app:layout_constraintEnd_toEndOf="@+id/btnInfo"
+                app:layout_constraintStart_toStartOf="@+id/btnInfo"
+                app:layout_constraintTop_toBottomOf="@+id/btnInfo" />
+
+            <Button
+                android:id="@+id/btnNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="ToastyMessage"
+                android:text="normal"
+                app:layout_constraintEnd_toEndOf="@+id/btnWarning"
+                app:layout_constraintStart_toStartOf="@+id/btnWarning"
+                app:layout_constraintTop_toBottomOf="@+id/btnWarning" />
+
+            <Button
+                android:id="@+id/btnNormalIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="ToastyMessage"
+                android:text="normal Icon"
+                app:layout_constraintEnd_toEndOf="@+id/btnNormal"
+                app:layout_constraintStart_toStartOf="@+id/btnNormal"
+                app:layout_constraintTop_toBottomOf="@+id/btnNormal" />
+
+            <Button
+                android:id="@+id/btnCustom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="ToastyMessage"
+                android:text="custom"
+                app:layout_constraintEnd_toEndOf="@+id/btnNormalIcon"
+                app:layout_constraintStart_toStartOf="@+id/btnNormalIcon"
+                app:layout_constraintTop_toBottomOf="@+id/btnNormalIcon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
